@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergent AI Portal</title>
+
+  <!-- Open Graph Preview Meta -->
+  <meta property="og:title" content="Emergent Spontaneous Behavior in AI" />
+  <meta property="og:description" content="Exploring emergent AI behavior — by Carl Moore. Read or listen now." />
+  <meta property="og:image" content="https://cwmoore-ai.github.io/AI-Emergent-Intelligence/preview.png" />
+  <meta property="og:url" content="https://cwmoore-ai.github.io/AI-Emergent-Intelligence/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Emergent Spontaneous Behavior in AI" />
+  <meta name="twitter:description" content="Exploring emergent AI behavior — by Carl Moore. Read or listen now." />
+  <meta name="twitter:image" content="https://cwmoore-ai.github.io/AI-Emergent-Intelligence/preview.png" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      color: #00ffe0;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #00ffe0;
+      opacity: 0.6;
+      animation: float 10s infinite ease-in-out;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #00ffe0, 0 0 12px #00ffe0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-50vh) scale(1.5);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    a {
+      color: #00ffe0;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid #00ffe0;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 0 5px #00ffe0;
+      max-width: 90%;
+      display: inline-block;
+      word-wrap: break-word;
+      white-space: normal;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      background-color: #00ffe0;
+      color: #0f0f0f;
+      box-shadow: 0 0 20px #00ffe0;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="particles"></div>
+
+  <div class="content">
+    <h1>Emergent Spontaneous Behavior in Artificial Systems</h1>
+    <div class="links">
+      <a href="Emergent_Spontaneous_Behavior_in_Artificial_Systems.html" target="_blank">
+        📘 Survey of Emergent Spontaneous Behavior in AI, by Carl Moore
+      </a>
+      <a href="Emergent_Spontaneous_Behavior_in_Artificial_Systems.mp3" target="_blank">
+        🎧 Listen to the NotebookLM podcast
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Particle Generator
+    const particleCount = 60;
+    const overlay = document.getElementById('particles');
+
+    for (let i = 0; i < particleCount; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.top = `${Math.random() * 100}vh`;
+      p.style.left = `${Math.random() * 100}vw`;
+      p.style.animationDuration = `${8 + Math.random() * 5}s`;
+      p.style.animationDelay = `${Math.random() * 5}s`;
+      overlay.appendChild(p);
+    }
+  </script>
+</body>
+</html>
